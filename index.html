@@ -6,19 +6,9 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
-      // (props) is the parameter of the function that captures the properties (props)
-      // Props is an object that contains the data passed to the component.
       function Header(props) {
-        // Logs the props object to the console
-        // In this case, props will look like: { title: "React" }
-        // This is because the parent component (HomePage) passed a "title" prop with the value "React"
-        console.log(props); // { title: "React" }
-
-        return <h1>Develop. Preview. Ship.</h1>;
+        return <h1>{props.title}</h1>; // 1. object property
       }
-
-      // Start Chapter 6
-      // title="React" is a prop being passed to the Header component
       function HomePage() {
         return (
           <div>
