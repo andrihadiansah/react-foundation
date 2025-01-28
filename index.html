@@ -6,13 +6,22 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
+      // returned value of a function
+      function createTitle(title) {
+        if (title) {
+          return title;
+        } else {
+          return "Default title";
+        }
+      }
+
       function Header({ title }) {
-        return <h1>{`Cool ${title}`}</h1>; // template literal
+        return <h1>{createTitle(title)}</h1>; //
       }
       function HomePage() {
         return (
           <div>
-            <Header title="React" /> 
+            <Header title="React" />
           </div>
         );
       }
