@@ -10,10 +10,12 @@
       function Header({ title }) {
         return <h1>{title ? title : "Default Title"}</h1>; // has title is have value ? if no title : is string "Default Title"
       }
+      // reuse the component but value of title of component header are not same.
       function HomePage() {
         return (
           <div>
-            <Header title="React" />
+            <Header title="React" /> 
+            <Header title="A new title" />
           </div>
         );
       }
