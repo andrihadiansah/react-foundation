@@ -8,12 +8,17 @@
     <script type="text/javascript">
       const app = document.getElementById("app");
 
-      function Header() { // this correct
+      // nesting component
+      function Header() {
         return <h1>Develop. Preview. Ship.</h1>;
       }
 
+      function HomePage() {
+        return <div></div>;
+      }
+
       const root = ReactDOM.createRoot(app);
-      root.render(<Header />); // this correct
+      root.render(<Header />);
     </script>
   </body>
 </html>
