@@ -8,12 +8,12 @@
     <script type="text/javascript">
       const app = document.getElementById("app");
 
-      function header() {
+      function Header() { // this correct
         return <h1>Develop. Preview. Ship.</h1>;
       }
 
       const root = ReactDOM.createRoot(app);
-      root.render(header); //render the component header then will got error, cz it  should be capitalized
+      root.render(<Header />); // this correct
     </script>
   </body>
 </html>
