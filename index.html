@@ -7,15 +7,13 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
       const app = document.getElementById("app");
-      // A component is a function that returns UI elements
-      function header() {
-     return (<h1>Develop. Preview. Ship.</h1>)
-   }
 
-      const text = "Develop. Preview. Ship.";
-      const headerContent = document.createTextNode(text);
-      header.appendChild(headerContent);
-      app.appendChild(header);
+      function header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(header); //render the component header then will got error, cz it  should be capitalized
     </script>
   </body>
 </html>
