@@ -13,9 +13,9 @@
       function HomePage() {
         const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
         function handleClick() {
-          // see the button element has call handle click, its mean if button on click, call handle click
           console.log("increment like count");
         }
+        const [likes, setLikes] = React.useState(0); // value constant named likes and setLikes are use useState from react, and the (0) is initial value.... then on children of button has call ({likes}) for see the number of likes
         return (
           <div>
             <Header title="Develop. Preview. Ship." />
@@ -24,7 +24,7 @@
                 <li key={name}>{name}</li>
               ))}
             </ul>
-            <button onClick={handleClick}>Like</button>
+            <button onClick={handleClick}>Like({likes})</button>
           </div>
         );
       }
