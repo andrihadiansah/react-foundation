@@ -6,9 +6,12 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
-      const app = document.getElementById('app');
-      const header = document.createElement('h1');
-      const text = 'Develop. Preview. Ship.';
+      const app = document.getElementById("app");
+      // below is component header
+      function header() {
+      }
+
+      const text = "Develop. Preview. Ship.";
       const headerContent = document.createTextNode(text);
       header.appendChild(headerContent);
       app.appendChild(header);
