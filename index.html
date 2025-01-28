@@ -9,10 +9,13 @@
       function Header({ title }) {
         return <h1>{title ? title : "Default Title"}</h1>;
       }
-      // chapter 7 start
+      // adding interactive with state
       function HomePage() {
         const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
-
+        function handleClick() {
+          // see the button element has call handle click, its mean if button on click, call handle click
+          console.log("increment like count");
+        }
         return (
           <div>
             <Header title="Develop. Preview. Ship." />
@@ -21,7 +24,7 @@
                 <li key={name}>{name}</li>
               ))}
             </ul>
-            <button>Like</button>
+            <button onClick={handleClick}>Like</button>
           </div>
         );
       }
