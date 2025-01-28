@@ -9,6 +9,11 @@
       // (props) is the parameter of the function that captures the properties (props)
       // Props is an object that contains the data passed to the component.
       function Header(props) {
+        // Logs the props object to the console
+        // In this case, props will look like: { title: "React" }
+        // This is because the parent component (HomePage) passed a "title" prop with the value "React"
+        console.log(props); // { title: "React" }
+
         return <h1>Develop. Preview. Ship.</h1>;
       }
 
