@@ -9,7 +9,7 @@
       function Header({ title }) {
         return <h1>{title ? title : "Default Title"}</h1>;
       }
-      // react need unique key for identify items in an array 
+      // chapter 7 start
       function HomePage() {
         const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
 
@@ -21,6 +21,7 @@
                 <li key={name}>{name}</li>
               ))}
             </ul>
+            <button>Like</button>
           </div>
         );
       }
