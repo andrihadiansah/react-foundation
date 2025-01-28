@@ -6,24 +6,22 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
-      const app = document.getElementById("app");
-
-      // nesting component
+      // header is a component
       function Header() {
         return <h1>Develop. Preview. Ship.</h1>;
       }
-
+      
+      // calling the component on page
       function HomePage() {
         return (
           <div>
-            {/* Nesting the Header component */}
-            <Header />
+            <Header /> 
           </div>
         );
       }
 
       const root = ReactDOM.createRoot(app);
-      root.render(<Header />);
+      root.render(<HomePage />);
     </script>
   </body>
 </html>
