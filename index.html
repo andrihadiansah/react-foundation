@@ -6,16 +6,21 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
-      // returned value of a function
       function Header({ title }) {
-        return <h1>{title ? title : "Default Title"}</h1>; // has title is have value ? if no title : is string "Default Title"
+        return <h1>{title ? title : "Default Title"}</h1>; 
       }
-      // reuse the component but value of title of component header are not same.
+      // Iterating through lists
       function HomePage() {
+        const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
+
         return (
           <div>
-            <Header title="React" /> 
-            <Header title="A new title" />
+            <Header title="Develop. Preview. Ship." />
+            <ul>
+              {names.map((name) => (
+                <li>{name}</li>
+              ))}
+            </ul>
           </div>
         );
       }
