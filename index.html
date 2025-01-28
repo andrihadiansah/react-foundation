@@ -6,18 +6,18 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
-      // header is a component
-      function Header() {
+      // (props) is the parameter of the function that captures the properties (props)
+      // Props is an object that contains the data passed to the component.
+      function Header(props) {
         return <h1>Develop. Preview. Ship.</h1>;
       }
-      
-      // start chapter 6
-      // components can be duplicate like below
+
+      // Start Chapter 6
+      // title="React" is a prop being passed to the Header component
       function HomePage() {
         return (
           <div>
-            <Header /> 
-            <Header /> 
+            <Header title="React" />
           </div>
         );
       }
