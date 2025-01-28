@@ -6,13 +6,13 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/javascript">
-      function Header(props) {
-        return <h1>{props.title}</h1>; // 1. object property
+      function Header({ title }) {
+        return <h1>{`Cool ${title}`}</h1>; // template literal
       }
       function HomePage() {
         return (
           <div>
-            <Header title="React" />
+            <Header title="React" /> 
           </div>
         );
       }
